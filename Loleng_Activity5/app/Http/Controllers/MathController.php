@@ -65,14 +65,14 @@ class MathController extends Controller
             "; //display niya ang value 1, tapos ang text color ay orange ung $num1, sa value 2 text color niya ay blue, display niya ung operator, display text color green if even o odd pag blue, tas div style box para sa $result, even number green box o odd number blue box naman.
         }
 
-        $display1 = compute($operation1, $num1, $num2); //tatawagin niya ang compute na function tas papasa niya ung argument, tapos maistore niya ung result sa $output1.
-        $display2 = compute($operation2, $num3, $num4); //sabay lang ito sa $output1, tatawaging rin ung compute function, tas papasa ung argument, tapos maistore ung result dito sa $output2.
+        $display1 = compute($operation1, $num1, $num2); //tatawagin niya ang compute na function tas papasa niya ung argument, tapos maistore niya ung result sa $display1.
+        $display2 = compute($operation2, $num3, $num4); //sabay lang ito sa $display1, tatawaging rin ung compute function, tas papasa ung argument, tapos maistore ung result dito sa $output2.
 
 
         return response("
             <h2>Justin Gerald G. Loleng|BSIT 3C</h2>         
             $display1
             $display2
-        "); //dito rereturn ang response display niya muna ang pangalan ko at year section, tapos display ung mga outputs na ung $output1 ay $output2.
+        "); //dito rereturn ang response display niya muna ang pangalan ko at year section, tapos display ung mga outputs na ung $display1 ay $display2.
     }
 }
