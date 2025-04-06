@@ -11,12 +11,15 @@
     <p style="color: green">{{session('success')}}</p>
     @endif
 
-    <h1>Welcome to the Dashboard</h1>
-    <p>Logged in as: {{ Auth::user()->name }}</p>
-
-    <form action="{{route('logout')}}" method="post">
+    <form action="{{route('login')}}" method="post">
         @csrf
-        <button type="submit" class="btn btn-danger">Logout</button>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+        <label for="password">Password:</label> 
+        <input type="password" name="password" required><br>
+        <button type="submit">Login</button>
+
     </form>
+    
 </body>
 </html>

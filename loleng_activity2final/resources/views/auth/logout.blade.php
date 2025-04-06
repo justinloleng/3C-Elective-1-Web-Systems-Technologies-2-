@@ -7,13 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    @if (session('success'))
-    <p style="color: green">{{session('success')}}</p>
-    @endif
-
-    <h1>Welcome to the Dashboard</h1>
-    <p>Logged in as: {{ Auth::user()->name }}</p>
-
     <form action="{{route('logout')}}" method="post">
         @csrf
         <button type="submit" class="btn btn-danger">Logout</button>
